@@ -9,6 +9,21 @@
   --ring: 222.2 84% 4.9%;
 }
 
+.text-type {
+  display: inline-block;
+  white-space: pre-wrap;
+}
+
+.text-type__cursor {
+  margin-left: 0.25rem;
+  display: inline-block;
+  opacity: 1;
+}
+
+.text-type__cursor--hidden {
+  display: none;
+}
+
 @theme {
   --color-background: hsl(var(--background));
   --color-foreground: hsl(var(--foreground));
@@ -21,9 +36,18 @@
   border-color: hsl(var(--border));
 }
 
+.backface-hidden {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
 @layer base {
   * {
     @apply border-border;
+  }
+
+  * {
+    @apply select-none;
   }
 
   body {
