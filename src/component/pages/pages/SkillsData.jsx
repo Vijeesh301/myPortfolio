@@ -16,7 +16,7 @@ const SkillsData = () => {
         <FlipCards title="Database" children="PostgreSQL, MySQL, MongoDB" />
         <FlipCards
           title="Tools"
-          children="Git, Docker, AWS, Postman, Maven, Linux"
+          children="Git, Docker, AWS Basics, Postman, CI/CD, Jira, Figma"
         />
       </div>
       {/* <div className="group h-80 w-64 [perspective:1000px]">

@@ -65,7 +65,7 @@ const Home = () => {
         <div id="about" className="mt-5">
           <AboutMe />
         </div>
-        <div className="mt-5" id="details">
+        <div className="my-15" id="details">
           <DetailsSession />
         </div>
         <div className="mt-5" id="skills">

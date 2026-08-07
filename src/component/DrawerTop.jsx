@@ -24,7 +24,13 @@ const DrawerTop = ({ open, setOpen, setTheme, theme }) => {
               <div>
                 <Tooltip>
                   <TooltipTrigger asChild>
-                    <FaLinkedin className="text-[2rem] text-red-400" />
+                    <a
+                      href="https://www.linkedin.com/in/Vijeeshv301/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <FaLinkedin className="text-[2rem] text-red-400" />
+                    </a>
                   </TooltipTrigger>
                   <TooltipContent side="top" className="text-white">
                     LinkedIn
@@ -34,7 +40,13 @@ const DrawerTop = ({ open, setOpen, setTheme, theme }) => {
               <div>
                 <Tooltip>
                   <TooltipTrigger asChild>
-                    <FaGithubSquare className="text-[2rem] text-red-400" />
+                    <a
+                      href="https://github.com/Vijeesh301"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <FaGithubSquare className="text-[2rem] text-red-400" />
+                    </a>
                   </TooltipTrigger>
                   <TooltipContent side="top" className="text-white">
                     Github
@@ -50,7 +62,7 @@ const DrawerTop = ({ open, setOpen, setTheme, theme }) => {
                     side={isMobile ? "bottom" : "top"}
                     className="text-white"
                   >
-                    Gmail
+                    vijeesh301@gmail.com
                   </TooltipContent>
                 </Tooltip>
               </div>

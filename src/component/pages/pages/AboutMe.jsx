@@ -15,8 +15,8 @@ const AboutMe = () => {
     <>
       <Card ref={ref} className="bg-[#540351]/10 w-full p-15 min-h-75">
         <CardHeader className="text-white text-[1.5rem]">
-          About Me
-          <div className="mt-2 w-full bg-white/20"></div>
+          <span>About Me</span>
+          <div className="h-px flex-1 bg-white/20"></div>
         </CardHeader>
         <CardContent className="text-white text-[1rem]">
           <p>
