@@ -29,8 +29,8 @@ const Home = () => {
                   <p className="tracking-[.9rem] text-center">
                     FULLSTACK DEVELOPER
                   </p>
-                  <p className="tracking-[.25rem] text-center">
-                    Java | Spring Boot | React | TypeScript
+                  <p className="tracking-[.08rem] text-center">
+                    Java | Spring Boot | React | TypeScript | JavaSrpit
                   </p>
                 </div>
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 w-full max-w-md">
