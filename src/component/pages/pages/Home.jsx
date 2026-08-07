@@ -18,7 +18,7 @@ const Home = () => {
   return (
     <>
       <div className="p-3">
-        <div className="p-2 rounded-2xl h-[calc(100vh-30px)] bg-black/40 backdrop-blur-xl border borde shadow-[0_0_25px_rgba(236,72,153,0.25)]">
+        <div className="p-2 rounded-2xl h-[calc(100vh-30px)] bg-black/40 backdrop-blur-xl borde shadow-[0_0_25px_rgba(236,72,153,0.25)]">
           <div className="grid h-full gap-2 grid-cols-[repeat(auto-fit,minmax(250px,1fr))]">
             <div className="flex items-center justify-center">
               <div className="flex flex-col items-center gap-6">
