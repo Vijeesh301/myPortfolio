@@ -1,8 +1,13 @@
 import ScrollControl from "@/controlls/ScrollCrontrol";
 import Home from "./pages/Home";
 import DrawerTop from "../DrawerTop";
-import { IoSettingsOutline } from "react-icons/io5";
+import { TbLayoutNavbarExpandFilled } from "react-icons/tb";
 import { useState } from "react";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
 
 document.title = "Vijeesh | Fullstack Developer";
 const HomePage = () => {
@@ -11,9 +16,6 @@ const HomePage = () => {
   const [theme, setTheme] = useState(false);
   return (
     <>
-      {/* <> */}
-      {/* <div className="min-h-screen bg-linear-to-br from-[#080006] via-[#160008] to-[#3b0018]"> */}
-      {/* <div className=`{""min-h-screen bg-linear-to-br from-[#f36ad0] via-[#be5079] to-[#e00b61]"}> */}
       <div
         className={`min-h-screen bg-linear-to-br ${theme ? "from-[#f36ad0] via-[#be5079] to-[#e00b61]" : "from-[#080006] via-[#160008] to-[#3b0018]"}`}
       >
@@ -28,12 +30,19 @@ const HomePage = () => {
           setTheme={setTheme}
           theme={theme}
         />
-        <div className="fixed bottom-[5%] left-4 z-50">
-          <IoSettingsOutline
-            className="text-[2rem] text-white/20 cursor-pointer hover:text-white"
-            onClick={() => setOpen(true)}
-          />
-        </div>
+        <Tooltip>
+          <TooltipTrigger asChild>
+            <div className="fixed bottom-[5%] left-4 z-50">
+              <TbLayoutNavbarExpandFilled
+                className="text-[2rem] text-white/20 cursor-pointer hover:text-white"
+                onClick={() => setOpen(true)}
+              />
+            </div>
+          </TooltipTrigger>
+          <TooltipContent side="top" className="text-white">
+            Menu
+          </TooltipContent>
+        </Tooltip>
       </div>
     </>
   );

@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import DetailsSession from "./DetailsSession";
 import AboutMe from "./AboutMe";
 import SkillsData from "./SkillsData";
+import { useMediaQuery } from "@/controlls/useMediaQuery";
 
 const Home = () => {
   const scrollToAboutMe = () => {
@@ -15,6 +16,10 @@ const Home = () => {
   const scrollToSkills = () => {
     document.getElementById("skills")?.scrollIntoView({ behavior: "smooth" });
   };
+
+  const isMobile = useMediaQuery("(max-width: 770px)");
+
+  const buttonClass = `${isMobile ? "text-white" : "hover:text-white"} bg-[#e04922]/20 hover:bg-[#e04922]/40 w-full}`;
   return (
     <>
       <div className="p-3">
@@ -34,22 +39,13 @@ const Home = () => {
                   </p>
                 </div>
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 w-full max-w-md">
-                  <Button
-                    className="bg-[#e04922]/20 hover:text-white hover:bg-[#e04922]/40 w-full"
-                    onClick={scrollToAboutMe}
-                  >
+                  <Button className={buttonClass} onClick={scrollToAboutMe}>
                     About me
                   </Button>
-                  <Button
-                    className="bg-[#e04922]/20 hover:text-white hover:bg-[#e04922]/40 w-full"
-                    onClick={scrollToDetails}
-                  >
+                  <Button className={buttonClass} onClick={scrollToDetails}>
                     Experience
                   </Button>
-                  <Button
-                    className="bg-[#e04922]/20 hover:text-white hover:bg-[#e04922]/40 w-full"
-                    onClick={scrollToSkills}
-                  >
+                  <Button className={buttonClass} onClick={scrollToSkills}>
                     Skills
                   </Button>
                 </div>
