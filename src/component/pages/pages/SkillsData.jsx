@@ -4,7 +4,11 @@ import FlipCards from "@/controlls/FlipCards";
 const SkillsData = () => {
   return (
     <>
-      <div className="mb-5 grid grid-cols-1 gap-4 rounded-lg md:grid-cols-2 lg:grid-cols-4">
+      <div className="text-white text-[1.5rem] px-10">
+        <span>Skills</span>
+        <div className="h-px flex-1 bg-white/20"></div>
+      </div>
+      <div className="my-5 grid grid-cols-1 gap-4 rounded-lg md:grid-cols-2 lg:grid-cols-4">
         <FlipCards
           title="Frontend"
           children="React, TypeScript, JavaScript, HTML5, CSS3, Tailwind CSS, shadcn/ui, Redux, React Query, Tanstack Query, Formik, Tanstack Table, React Router, Vite, Webpack, MUI, Ant Design, Bootstrap"

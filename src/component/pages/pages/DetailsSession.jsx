@@ -7,6 +7,8 @@ import {
 } from "@/components/ui/accordion";
 
 const DetailsSession = () => {
+  const spanClass =
+    "text-xs px-2 py-1 rounded-full border border-white/15 text-white/60";
   return (
     <>
       <div className="p-3 relative overflow-hidden">
@@ -35,33 +37,119 @@ const DetailsSession = () => {
           <CardContent>
             <Accordion type="single" collapsible>
               <AccordionItem
-                value="shipping"
-                className="border-b border-neutral-800/70"
+                value="freelance"
+                className="border-b border-white/15"
               >
-                <AccordionTrigger>Frontend Developer | 2006</AccordionTrigger>
+                <AccordionTrigger className="hover:no-underline">
+                  <div className="flex flex-1 flex-col items-start text-left gap-0.5 pr-2">
+                    <span className="text-white text-base font-medium">
+                      Frontend Developer
+                    </span>
+                    <span className="text-white/50 text-sm">
+                      Freelance Project - Hospital ERP · 07/2025 - 02/2026
+                    </span>
+                  </div>
+                </AccordionTrigger>
                 <AccordionContent>
-                  We offer standard (5-7 days), express (2-3 days), and
-                  overnight shipping. Free shipping on international orders.
+                  <ul className="list-disc list-inside space-y-1.5 text-white/70 text-sm">
+                    <li>
+                      Built a responsive client-facing web app end-to-end using
+                      React, Shadecn and Tailwind
+                    </li>
+                    <li>
+                      Implemented client-side encryption and decryption to
+                      secure sensitive data before it left the browser
+                    </li>
+                    <li>
+                      Integrated REST APIs and handled state management across
+                      the app
+                    </li>
+                  </ul>
+                  <div className="flex flex-wrap gap-2 mt-3">
+                    <span className={spanClass}>React</span>
+                    <span className={spanClass}>Tailwind CSS</span>
+                    <span className={spanClass}>REST API</span>
+                    <span className={spanClass}>Javascript</span>
+                    <span className={spanClass}>Shadcn</span>
+                    <span className={spanClass}>Web Crypto API</span>
+                  </div>
                 </AccordionContent>
               </AccordionItem>
               <AccordionItem
-                value="returns"
-                className="border-b border-neutral-800/70"
+                value="frontend-dev"
+                className="border-b border-white/15"
               >
-                <AccordionTrigger>Software Developer | 2000</AccordionTrigger>
-                <AccordionContent>
-                  Returns accepted within 30 days. Items must be unused and in
-                  original packaging. Refunds processed within 5-7 business
-                  days.
-                </AccordionContent>
-              </AccordionItem>
-              <AccordionItem value="support">
-                <AccordionTrigger>
-                  Frontend Developer - Freelance Project | 2222
+                <AccordionTrigger className="hover:no-underline">
+                  <div className="flex flex-1 flex-col items-start text-left gap-0.5 pr-2">
+                    <span className="text-white text-base font-medium">
+                      Frontend Developer
+                    </span>
+                    <span className="text-white/50 text-sm">
+                      Cordova Educational Solutions · 07/2024 - 07/2025
+                    </span>
+                  </div>
                 </AccordionTrigger>
                 <AccordionContent>
-                  Reach us via email, live chat, or phone. We respond within 24
-                  hours during business days.
+                  <ul className="list-disc list-inside space-y-1.5 text-white/70 text-sm">
+                    <li>
+                      Developed and maintained core UI features used by
+                      thousands of users
+                    </li>
+                    <li>
+                      Improved page load performance by optimizing bundle size
+                      and lazy loading
+                    </li>
+                  </ul>
+                  <div className="flex flex-wrap gap-2 mt-3">
+                    <span className={spanClass}>React</span>
+                    <span className={spanClass}>TypeScript</span>
+                    <span className={spanClass}>Javascript</span>
+                    <span className={spanClass}>Ant Design</span>
+                    <span className={spanClass}>MUI</span>
+                  </div>
+                </AccordionContent>
+              </AccordionItem>
+              <AccordionItem value="software-dev">
+                <AccordionTrigger className="hover:no-underline">
+                  <div className="flex flex-1 flex-col items-start text-left gap-0.5 pr-2">
+                    <span className="text-white text-base font-medium">
+                      Software Developer
+                    </span>
+                    <span className="text-white/50 text-sm">
+                      GJ Global IT Ventures · 03/2022 - 07/2024
+                    </span>
+                  </div>
+                </AccordionTrigger>
+                <AccordionContent>
+                  <ul className="list-disc list-inside space-y-1.5 text-white/70 text-sm">
+                    <li>
+                      Developed and maintained core UI features used by
+                      thousands of users
+                    </li>
+                    <li>
+                      Improved page load performance by optimizing bundle size
+                      and lazy loading
+                    </li>
+                    <li>
+                      Built backend services using Java and Spring Boot for
+                      internal tools
+                    </li>
+                    <li>
+                      Worked across the full stack, connecting React frontends
+                      to Spring Boot APIs
+                    </li>
+                  </ul>
+                  <div className="flex flex-wrap gap-2 mt-3">
+                    <span className={spanClass}>React</span>
+                    <span className={spanClass}>Javascript</span>
+                    <span className={spanClass}>Typescript</span>
+                    <span className={spanClass}>TypeORM</span>
+                    <span className={spanClass}>GraphQL</span>
+                    <span className={spanClass}>Tailwind CSS</span>
+                    <span className={spanClass}>REST API</span>
+                    <span className={spanClass}>Java</span>
+                    <span className={spanClass}>Spring Boot</span>
+                  </div>
                 </AccordionContent>
               </AccordionItem>
             </Accordion>

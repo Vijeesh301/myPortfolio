@@ -37,6 +37,7 @@ const ScrollControl = () => {
         border
         border-white/10
         hover:bg-[#e04922]/60
+        hover:text-white
         shadow-[0_0_20px_rgba(224,73,34,0.4)]
       "
     >

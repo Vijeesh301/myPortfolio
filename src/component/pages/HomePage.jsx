@@ -62,7 +62,7 @@ const HomePage = () => {
             <NavigationMenuList>
               <NavigationMenuItem>
                 <NavigationMenuTrigger className="text-white [&>svg:last-child]:hidden">
-                  <ImMenu4 className="text-white/20 text-[2rem] cursor-pointer hover:text-white" />
+                  <ImMenu4 className="text-white/30 text-[2rem] cursor-pointer hover:text-white" />
                 </NavigationMenuTrigger>
                 <NavigationMenuContent className="text-white">
                   <ul className="grid w-50 gap-1 p-2">
@@ -86,7 +86,7 @@ const HomePage = () => {
                     </li>
                     <li>
                       <a href="mailto:vijeesh301@gmail.com">
-                        <SiGmail className="text-white/30 hover:text-white text-[1.5rem] cursor-pointer" />
+                        <SiGmail className="text-white/30 hover:text-white text-[1.4rem] cursor-pointer" />
                       </a>
                     </li>
                     <li>
