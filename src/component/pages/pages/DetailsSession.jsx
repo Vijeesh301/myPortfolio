@@ -1,3 +1,11 @@
+import { Card, CardContent, CardHeader } from "@/components/ui/card";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
+
 const DetailsSession = () => {
   return (
     <>
@@ -12,13 +20,53 @@ const DetailsSession = () => {
               </div>
             </div>
           </div>
-          <div className="text-white h-50 flex justify-center items-center">
+          <div className="text-white h-50 flex justify-center items-center p-5">
             <p>
               I build scalable web applications with modern frontend and backend
               technologies.
             </p>
           </div>
         </div>
+        <Card className="bg-[#540351]/10 text-white w-full p-5 mt-2 min-h-50">
+          <CardHeader className="text-[1.5rem]">
+            <span>Experience</span>
+            <div className="h-px flex-1 bg-white/20"></div>
+          </CardHeader>
+          <CardContent>
+            <Accordion type="single" collapsible>
+              <AccordionItem
+                value="shipping"
+                className="border-b border-neutral-800/70"
+              >
+                <AccordionTrigger>Frontend Developer | 2006</AccordionTrigger>
+                <AccordionContent>
+                  We offer standard (5-7 days), express (2-3 days), and
+                  overnight shipping. Free shipping on international orders.
+                </AccordionContent>
+              </AccordionItem>
+              <AccordionItem
+                value="returns"
+                className="border-b border-neutral-800/70"
+              >
+                <AccordionTrigger>Software Developer | 2000</AccordionTrigger>
+                <AccordionContent>
+                  Returns accepted within 30 days. Items must be unused and in
+                  original packaging. Refunds processed within 5-7 business
+                  days.
+                </AccordionContent>
+              </AccordionItem>
+              <AccordionItem value="support">
+                <AccordionTrigger>
+                  Frontend Developer - Freelance Project | 2222
+                </AccordionTrigger>
+                <AccordionContent>
+                  Reach us via email, live chat, or phone. We respond within 24
+                  hours during business days.
+                </AccordionContent>
+              </AccordionItem>
+            </Accordion>
+          </CardContent>
+        </Card>
       </div>
     </>
   );

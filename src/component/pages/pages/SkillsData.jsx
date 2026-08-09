@@ -4,7 +4,7 @@ import FlipCards from "@/controlls/FlipCards";
 const SkillsData = () => {
   return (
     <>
-      <div className="grid grid-cols-1 gap-4 rounded-lg md:grid-cols-2 lg:grid-cols-4">
+      <div className="mb-5 grid grid-cols-1 gap-4 rounded-lg md:grid-cols-2 lg:grid-cols-4">
         <FlipCards
           title="Frontend"
           children="React, TypeScript, JavaScript, HTML5, CSS3, Tailwind CSS, shadcn/ui, Redux, React Query, Tanstack Query, Formik, Tanstack Table, React Router, Vite, Webpack, MUI, Ant Design, Bootstrap"
@@ -16,7 +16,7 @@ const SkillsData = () => {
         <FlipCards title="Database" children="PostgreSQL, MySQL, MongoDB" />
         <FlipCards
           title="Tools"
-          children="Git, Docker, AWS, Postman, Maven, Linux"
+          children="Git, Docker, AWS Basics, Postman, CI/CD, Jira, Figma"
         />
       </div>
       {/* <div className="group h-80 w-64 [perspective:1000px]">

@@ -2,8 +2,11 @@ import { Button } from "@/components/ui/button";
 import DetailsSession from "./DetailsSession";
 import AboutMe from "./AboutMe";
 import SkillsData from "./SkillsData";
+import { useMediaQuery } from "@/controlls/useMediaQuery";
+import myPhoto from "@/assets/portfolio.png";
+import myPhotoM from "@/assets/portfolioM.png";
 
-const Home = () => {
+const Home = ({ theme }) => {
   const scrollToAboutMe = () => {
     document.getElementById("about")?.scrollIntoView({ behavior: "smooth" });
   };
@@ -15,10 +18,14 @@ const Home = () => {
   const scrollToSkills = () => {
     document.getElementById("skills")?.scrollIntoView({ behavior: "smooth" });
   };
+
+  const isMobile = useMediaQuery("(max-width: 770px)");
+
+  const buttonClass = `${isMobile ? "text-white" : "hover:text-white"} bg-[#e04922]/20 hover:bg-[#e04922]/40 w-full}`;
   return (
     <>
       <div className="p-3">
-        <div className="p-2 rounded-2xl h-[calc(100vh-30px)] bg-black/40 backdrop-blur-xl border borde shadow-[0_0_25px_rgba(236,72,153,0.25)]">
+        <div className="rounded-2xl h-[calc(100vh-30px)] bg-black/40 backdrop-blur-xl borde shadow-[0_0_25px_rgba(236,72,153,0.25)]">
           <div className="grid h-full gap-2 grid-cols-[repeat(auto-fit,minmax(250px,1fr))]">
             <div className="flex items-center justify-center">
               <div className="flex flex-col items-center gap-6">
@@ -34,38 +41,30 @@ const Home = () => {
                   </p>
                 </div>
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 w-full max-w-md">
-                  <Button
-                    className="bg-[#e04922]/20 hover:text-white hover:bg-[#e04922]/40 w-full"
-                    onClick={scrollToAboutMe}
-                  >
+                  <Button className={buttonClass} onClick={scrollToAboutMe}>
                     About me
                   </Button>
-                  <Button
-                    className="bg-[#e04922]/20 hover:text-white hover:bg-[#e04922]/40 w-full"
-                    onClick={scrollToDetails}
-                  >
+                  <Button className={buttonClass} onClick={scrollToDetails}>
                     Experience
                   </Button>
-                  <Button
-                    className="bg-[#e04922]/20 hover:text-white hover:bg-[#e04922]/40 w-full"
-                    onClick={scrollToSkills}
-                  >
+                  <Button className={buttonClass} onClick={scrollToSkills}>
                     Skills
                   </Button>
                 </div>
               </div>
             </div>
             <div className="flex items-center justify-center">
-              <div className="text-[1.5rem] text-white">
-                <p>photo</p>
-              </div>
+              <img
+                src={!theme ? myPhoto : myPhotoM}
+                className="h-full w-auto object-cover"
+              />
             </div>
           </div>
         </div>
         <div id="about" className="mt-5">
           <AboutMe />
         </div>
-        <div className="mt-5" id="details">
+        <div className="my-15" id="details">
           <DetailsSession />
         </div>
         <div className="mt-5" id="skills">
