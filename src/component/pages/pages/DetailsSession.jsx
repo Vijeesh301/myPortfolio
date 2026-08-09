@@ -46,7 +46,7 @@ const DetailsSession = () => {
                       Frontend Developer
                     </span>
                     <span className="text-white/50 text-sm">
-                      Freelance Project - Hospital ERP · 07/2025 - 02/2026
+                      Freelance Project · 07/2025 - 02/2026
                     </span>
                   </div>
                 </AccordionTrigger>
@@ -72,6 +72,19 @@ const DetailsSession = () => {
                     <span className={spanClass}>Javascript</span>
                     <span className={spanClass}>Shadcn</span>
                     <span className={spanClass}>Web Crypto API</span>
+                  </div>
+                  <div className="text-[1rem] flex flex-1 flex-col items-start text-left gap-0.5 pr-2 mt-3">
+                    <span className="text-white text-base font-medium">
+                      Projects:
+                    </span>
+                    <ul className="text-[13px] list-disc list-inside space-y-1.5 text-white/70 text-sm">
+                      <li>
+                        <span className="font-bold">Hospital ERP System:</span>{" "}
+                        Healthcare platform managing patient appointments,
+                        doctor diagnostics, prescriptions, and hospital
+                        administration workflows.
+                      </li>
+                    </ul>
                   </div>
                 </AccordionContent>
               </AccordionItem>
@@ -106,6 +119,28 @@ const DetailsSession = () => {
                     <span className={spanClass}>Javascript</span>
                     <span className={spanClass}>Ant Design</span>
                     <span className={spanClass}>MUI</span>
+                  </div>
+                  <div className="text-[1rem] flex flex-1 flex-col items-start text-left gap-0.5 pr-2 mt-3">
+                    <span className="text-white text-base font-medium">
+                      Projects:
+                    </span>
+                    <ul className="text-[13px] list-disc list-inside space-y-1.5 text-white/70 text-sm">
+                      <li>
+                        <span className="font-bold">
+                          HR Management System (HRMS):
+                        </span>{" "}
+                        Employee lifecycle management system including
+                        recruitment, onboarding, payroll, leave management, and
+                        task allocation.
+                      </li>
+                      <li>
+                        <span className="font-bold">
+                          Logistics Management Platform:
+                        </span>{" "}
+                        Transport and logistics operations system supporting
+                        workflow automation and operational tracking
+                      </li>
+                    </ul>
                   </div>
                 </AccordionContent>
               </AccordionItem>
@@ -149,6 +184,34 @@ const DetailsSession = () => {
                     <span className={spanClass}>REST API</span>
                     <span className={spanClass}>Java</span>
                     <span className={spanClass}>Spring Boot</span>
+                  </div>
+                  <div className="text-[1rem] flex flex-1 flex-col items-start text-left gap-0.5 pr-2 mt-3">
+                    <span className="text-white text-base font-medium">
+                      Projects:
+                    </span>
+                    <ul className="text-[13px] list-disc list-inside space-y-1.5 text-white/70 text-sm">
+                      <li>
+                        <span className="font-bold">Fintech Platform:</span>{" "}
+                        Digital payment platform supporting micro-ATM services,
+                        mobile recharge, and utility bill payments.
+                      </li>
+                      <li>
+                        <span className="font-bold">
+                          Education Management System (EMS):
+                        </span>{" "}
+                        School management platform handling attendance,
+                        examinations, student records, fee management, and staff
+                        administration.
+                      </li>
+                      <li>
+                        <span className="font-bold">
+                          Campus Management System (CMS):
+                        </span>{" "}
+                        College ERP platform supporting department-level student
+                        management, attendance tracking, examinations, and
+                        administration.
+                      </li>
+                    </ul>
                   </div>
                 </AccordionContent>
               </AccordionItem>
