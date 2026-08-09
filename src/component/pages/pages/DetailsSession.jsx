@@ -27,7 +27,7 @@ const DetailsSession = () => {
             </p>
           </div>
         </div>
-        <Card className="bg-[#540351]/10 text-white w-full p-5 mt-2 min-h-75">
+        <Card className="bg-[#540351]/10 text-white w-full p-5 mt-2 min-h-50">
           <CardHeader className="text-[1.5rem]">
             <span>Experience</span>
             <div className="h-px flex-1 bg-white/20"></div>
