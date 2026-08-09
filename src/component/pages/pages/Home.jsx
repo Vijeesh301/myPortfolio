@@ -40,7 +40,7 @@ const Home = ({ theme }) => {
                     Java | Spring Boot | React | TypeScript | JavaSrpit
                   </p>
                 </div>
-                <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 w-full max-w-md">
+                <div className="grid grid-cols-3 md:grid-cols-3 lg:grid-cols-3 gap-3 w-full max-w-md px-2">
                   <Button className={buttonClass} onClick={scrollToAboutMe}>
                     About me
                   </Button>
