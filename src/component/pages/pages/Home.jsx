@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import DetailsSession from "./DetailsSession";
 import AboutMe from "./AboutMe";
 import SkillsData from "./SkillsData";
-import { useMediaQuery } from "@/controlls/useMediaQuery";
+import useMediaQuery from "@/controlls/useMediaQuery";
 import myPhoto from "@/assets/portfolio.png";
 import myPhotoM from "@/assets/portfolioM.png";
 

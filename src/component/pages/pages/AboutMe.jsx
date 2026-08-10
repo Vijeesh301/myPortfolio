@@ -1,6 +1,6 @@
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
-import { useInView } from "@/controlls/TextType";
-import { useTypewriter } from "@/controlls/useTypeWriter";
+import useInView from "@/controlls/TextType";
+import useTypewriter from "@/controlls/useTypeWriter";
 
 const AboutMe = () => {
   const [ref, inView] = useInView(0.3);
