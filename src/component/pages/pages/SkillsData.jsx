@@ -1,4 +1,5 @@
 import FlipCards from "@/controlls/FlipCards";
+import { Card, CardContent, CardHeader } from "@/components/ui/card";
 
 const SkillsData = () => {
   return (
@@ -22,60 +23,46 @@ const SkillsData = () => {
           children="Git, Docker, AWS Basics, Postman, CI/CD, Jira, Figma"
         />
       </div>
-      {/* <div className="group h-80 w-64 [perspective:1000px]">
-          <div className="relative h-full w-full rounded-xl transition-all duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]"> */}
-      {/* Front */}
-      {/* <div className="absolute inset-0 rounded-xl bg-zinc-900 border border-white/10 flex items-center justify-center text-white [backface-visibility:hidden]">
-              <div className="text-center">
-                <h2 className="text-2xl font-bold">React</h2>
-                <p className="text-gray-400">Frontend</p>
-              </div>
-            </div>
-
-            {/* Back */}
-      {/* <div className="absolute inset-0 rounded-xl bg-red-600 text-white flex items-center justify-center [transform:rotateY(180deg)] [backface-visibility:hidden]"> */}
-      {/* <div className="text-center p-4">
-                <h2 className="text-xl font-bold">Skills</h2>
-                <p>React</p>
-                <p>TypeScript</p>
-                <p>Tailwind CSS</p>
-              </div>
-            </div> */}
-      {/* </div> */}
-      {/* </div> */}
-      {/* <Card className="text-white min-h-40 rounded bg-[#ffc5f0]/10 p-4">
-          <CardHeader>
-            <CardTitle>Frontend</CardTitle>
-          </CardHeader>
-          <CardContent>
-            <p>Card Content</p>
-          </CardContent>
-        </Card>
-        <Card className="text-white min-h-40 rounded bg-[#ffc5ce]/10 p-4">
-          <CardHeader>
-            <CardTitle>Backend</CardTitle>
-          </CardHeader>
-          <CardContent>
-            <p>Card Content</p>
-          </CardContent>
-        </Card>
-        <Card className="text-white min-h-40 rounded bg-[#f9c3ff]/10 p-4">
-          <CardHeader>
-            <CardTitle>Database</CardTitle>
-          </CardHeader>
-          <CardContent>
-            <p>Card Content</p>
-          </CardContent>
-        </Card>
-        <Card className="text-white min-h-40 rounded bg-blue-200/10 p-4">
-          <CardHeader>
-            <CardTitle>Tools</CardTitle>
-          </CardHeader>
-          <CardContent>
-            <p>Card Content</p>
-          </CardContent>
-        </Card> */}
-      {/* </div> */}
+      <Card className="text-white p-7 bg-[#b45c42]/10">
+        <CardHeader className="text-[1.5rem]">
+          <span>Certificates</span>
+          <div className="h-px flex-1 bg-white/20"></div>
+        </CardHeader>
+        <CardContent>
+          <div className="flex flex-1 flex-col items-start text-left gap-0.5 pr-2">
+            <span className="text-white text-base font-medium">
+              Fullstack Developer - MERN
+            </span>
+            <span className="text-white/50 text-sm">
+              ICT Academy of Kerala - 10/2021 - 03/2022
+            </span>
+          </div>
+          <div className="flex flex-1 flex-col items-start text-left gap-0.5 pr-2 mt-4">
+            <span className="text-white text-base font-medium">
+              Web Designing
+            </span>
+            <span className="text-white/50 text-sm">
+              Norka Roots, Govt. of Kerala - 08/2012 - 11/2012
+            </span>
+          </div>
+        </CardContent>
+        <CardHeader className="text-[1.5rem]">
+          <span>Languages</span>
+          <div className="h-px flex-1 bg-white/20"></div>
+        </CardHeader>
+        <CardContent>
+          <div className="flex flex-1 flex-col items-start text-left gap-0.5 pr-2">
+            <span className="text-white text-base font-medium">
+              English - B2 | Malayalam | Tamil
+            </span>
+          </div>
+          {/* <div className="flex flex-1 flex-col items-start text-left gap-0.5 pr-2 mt-4">
+            <span className="text-white text-base font-medium">
+              German - B2
+            </span>
+          </div> */}
+        </CardContent>
+      </Card>
     </>
   );
 };
