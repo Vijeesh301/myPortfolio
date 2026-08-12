@@ -1,7 +1,22 @@
 import FlipCards from "@/controlls/FlipCards";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 
-const SkillsData = () => {
+{
+  /* <iframe
+  src="https://example.com/document.pdf"
+  width="100%"
+  height="600px"
+/> */
+}
+
+{
+  /* <a href="https://example.com/document.pdf" download>
+  Download PDF
+</a> */
+}
+
+const SkillsData = ({ regionData }) => {
+  console.log(regionData, "skill hjkhkhk");
   return (
     <>
       <div className="text-white text-[1.5rem] px-10">
@@ -53,14 +68,10 @@ const SkillsData = () => {
         <CardContent>
           <div className="flex flex-1 flex-col items-start text-left gap-0.5 pr-2">
             <span className="text-white text-base font-medium">
-              English - B2 | Malayalam | Tamil
+              {regionData?.country_name !== "India" && "German - B2 | "} English
+              - B2 | Malayalam | Tamil
             </span>
           </div>
-          {/* <div className="flex flex-1 flex-col items-start text-left gap-0.5 pr-2 mt-4">
-            <span className="text-white text-base font-medium">
-              German - B2
-            </span>
-          </div> */}
         </CardContent>
       </Card>
     </>

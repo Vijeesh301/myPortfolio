@@ -2,11 +2,15 @@ import { Button } from "@/components/ui/button";
 import DetailsSession from "./DetailsSession";
 import AboutMe from "./AboutMe";
 import SkillsData from "./SkillsData";
-import { useMediaQuery } from "@/controlls/useMediaQuery";
+import useMediaQuery from "@/controlls/useMediaQuery";
 import myPhoto from "@/assets/portfolio.png";
 import myPhotoM from "@/assets/portfolioM.png";
+import { useEffect, useState } from "react";
+import axios from "axios";
 
 const Home = ({ theme }) => {
+  const [regionData, setRegionData] = useState("");
+
   const scrollToAboutMe = () => {
     document.getElementById("about")?.scrollIntoView({ behavior: "smooth" });
   };
@@ -22,6 +26,14 @@ const Home = ({ theme }) => {
   const isMobile = useMediaQuery("(max-width: 770px)");
 
   const buttonClass = `${isMobile ? "text-white" : "hover:text-white"} bg-[#e04922]/20 hover:bg-[#e04922]/40 w-full}`;
+
+  useEffect(() => {
+    axios.get("https://ipapi.co/json/").then((res) => {
+      setRegionData(res?.data);
+      return res;
+    });
+  }, []);
+
   return (
     <>
       <div className="p-3">
@@ -68,7 +80,7 @@ const Home = ({ theme }) => {
           <DetailsSession />
         </div>
         <div className="mt-5" id="skills">
-          <SkillsData />
+          <SkillsData regionData={regionData} />
         </div>
       </div>
     </>

@@ -10,7 +10,7 @@ import {
   TooltipContent,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
-import { useMediaQuery } from "@/controlls/useMediaQuery";
+import  useMediaQuery  from "@/controlls/useMediaQuery";
 
 const DrawerTop = ({ open, setOpen, setTheme, theme }) => {
   const isMobile = useMediaQuery("(max-width: 770px)");
