@@ -62,9 +62,6 @@ const HomePage = () => {
 
   return (
     <>
-      {/* <div
-        className={`min-h-screen bg-linear-to-br ${theme ? "from-[#e0baf1] via-[#5c355a] to-[#f4b3d0]" : "from-[#080006] via-[#160008] to-[#3b0018]"}`}
-      > */}
       <div
         className={`min-h-screen bg-linear-to-br ${theme ? "from-[#ebccb7] via-[#c28a6c] to-[#f0b2cd]" : "from-[#080006] via-[#160008] to-[#3b0018]"}`}
       >
@@ -130,7 +127,6 @@ const HomePage = () => {
             </NavigationMenuList>
           </NavigationMenu>
         </div>
-        {/* <div className="fixed bottom-2 right-2 z-50  text-white/40 text-[11px]"> */}
         <div
           className={`fixed bottom-2 right-2 z-50 text-[11px] ${!theme ? "text-white/40" : "text-[#5a0039]"}`}
         >

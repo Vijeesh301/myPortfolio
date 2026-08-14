@@ -20,7 +20,7 @@ const SkillsData = ({ regionData }) => {
         <FlipCards title="Database" children="PostgreSQL, MySQL, MongoDB" />
         <FlipCards
           title="Tools"
-          children="Git, Docker, AWS Basics, Postman, CI/CD, Jira, Figma"
+          children="Git, Docker, AWS Basics, Postman, CI/CD, Jira, Figma, Photoshop, Indesign, Illustrator"
         />
       </div>
       <Card className="text-white p-7 bg-[#b45c42]/10">
