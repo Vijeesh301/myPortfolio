@@ -1,9 +1,16 @@
 import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { ArrowUp } from "lucide-react";
+import Lenis from "lenis";
 
 const ScrollControl = () => {
   const [visible, setVisible] = useState(false);
+
+  const lenis = new Lenis({
+    autoRaf: true,
+    smoothWheel: true,
+    wheelMultiplier: 0.8,
+  });
 
   useEffect(() => {
     const handleScroll = () => {
@@ -14,9 +21,8 @@ const ScrollControl = () => {
   }, []);
 
   const scrollTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
+    lenis.scrollTo(0, {
+      duration: 1.2,
     });
   };
 
