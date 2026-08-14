@@ -5,14 +5,15 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import { Button } from "@/components/ui/button";
 
-const DetailsSession = () => {
+const DetailsSession = ({ regionData }) => {
   const spanClass =
     "text-xs px-2 py-1 rounded-full border border-white/15 text-white/60";
   return (
     <>
       <div className="p-3 relative overflow-hidden">
-        <div className="absolute top-0 left-50 w-72 h-72 bg-red-900/20 rounded-full"></div>
+        <div className="absolute top-0 left-60 w-72 h-72 bg-red-900/15 rounded-full"></div>
         <div className="grid h-full gap-2 grid-cols-[repeat(auto-fit,minmax(250px,1fr))]">
           <div className="text-white flex justify-center">
             <div className="relative p-3 bg-black/10 backdrop-blur-[5px] w-60">
@@ -23,13 +24,34 @@ const DetailsSession = () => {
             </div>
           </div>
           <div className="text-white h-50 flex justify-center items-center p-5">
-            <p>
-              I build scalable web applications with modern frontend and backend
-              technologies.
-            </p>
+            <div>
+              <p>
+                I build scalable web applications with modern frontend and
+                backend technologies.
+              </p>
+              {regionData?.country_name !== "India" && (
+                <>
+                  <div className="text-white text-[1.5rem] my-5">
+                    <span>Resume</span>
+                    <div className="h-px flex-1 bg-white/20"></div>
+                  </div>
+                  <div className="text-white gap-5 flex">
+                    <a
+                      href="https://drive.google.com/file/d/1MK0ynY7FX5mp1CvGqK7w2hd2Gw8_JdJN/view?usp=drive_link"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <Button className="bg-[#16b36b]/20 w-50 hover:bg-[#16b36b]/50">
+                        View & Download
+                      </Button>
+                    </a>
+                  </div>
+                </>
+              )}
+            </div>
           </div>
         </div>
-        <Card className="bg-[#540351]/10 text-white w-full p-5 mt-2 min-h-50">
+        <Card className="bg-[#540351]/10 text-white w-full p-5 mt-15 min-h-50">
           <CardHeader className="text-[1.5rem]">
             <span>Experience</span>
             <div className="h-px flex-1 bg-white/20"></div>
