@@ -2,7 +2,7 @@ import ScrollControl from "@/controlls/ScrollCrontrol";
 import Home from "./pages/Home";
 import DrawerTop from "../DrawerTop";
 import { ImMenu4 } from "react-icons/im";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -15,12 +15,93 @@ import { FaGithubSquare } from "react-icons/fa";
 import { SiGmail } from "react-icons/si";
 import { CiDark } from "react-icons/ci";
 import { MdDarkMode } from "react-icons/md";
+import axios from "axios";
+import { doc, setDoc, getDoc } from "firebase/firestore";
+import { db } from "@/firebase";
 
 document.title = "Vijeesh | Fullstack Developer";
 const HomePage = () => {
   const [open, setOpen] = useState(false);
 
   const [theme, setTheme] = useState(false);
+
+  const [visitorData, setVisitorData] = useState([]);
+
+  const [regionData, setRegionData] = useState("");
+
+  useEffect(() => {
+    const getUserData = async () => {
+      try {
+        const res = await axios.get("https://ipapi.co/json/");
+        setRegionData(res.data);
+        const docRef = doc(db, "stats", "website");
+        const docSnap = await getDoc(docRef);
+        const userData = res.data;
+        const existingUsers = docSnap.data()?.userData ?? [];
+        setVisitorData(existingUsers);
+        if (docSnap.exists()) {
+          const hasExistingIp = existingUsers.some(
+            (data) => data?.ip === userData.ip,
+          );
+          if (!hasExistingIp) {
+            await setDoc(
+              doc(db, "stats", "website"),
+              {
+                userData: [...existingUsers, userData],
+              },
+              { merge: true },
+            );
+          }
+        }
+      } catch (err) {
+        return err;
+      }
+    };
+    getUserData();
+  }, []);
+
+  // FIREBASE DATA
+  // useEffect(() => {
+  //   const countVisit = async () => {
+  //     try {
+  //       const docRef = doc(db, "stats", "website");
+  //       const docSnap = await getDoc(docRef);
+  //       if (docSnap.exists()) {
+  //         const userData = [{}];
+  //         console.log(docSnap.data());
+  //         console.log("Visitors:", docSnap.data().visitors);
+  //       } else {
+  //         console.log("Document doesn't exist");
+  //       }
+  //     } catch (err) {
+  //       return err;
+  //     }
+
+  // try {
+  //   const docRef = doc(db, "stats", "visitors");
+
+  //   const docSnap = await getDoc(docRef);
+
+  //   if (docSnap.exists()) {
+  //     console.log(docSnap.data());
+  //   } else {
+  //     console.log("Document does not exist");
+  //   }
+  // const statsRef = doc(db, "stats", "website");
+  // await setDoc(
+  //   statsRef,
+  //   {
+  //     visitors: increment(1),
+  //   },
+  //   { merge: true },
+  // );
+  // } catch (error) {
+  //   return error;
+  // }
+  //   };
+  //   countVisit();
+  // }, []);
+
   return (
     <>
       {/* <div
@@ -32,7 +113,7 @@ const HomePage = () => {
         <div className="absolute top-10 left-10 w-24 h-24 bg-red-500/20 rounded-full blur-xl"></div>
         <div className="absolute top-40 right-20 w-32 h-32 bg-purple-500/20 rounded-full blur-2xl"></div>
         <div className="absolute bottom-20 left-1/3 w-20 h-20 bg-pink-500/20 rounded-full blur-xl"></div>
-        <Home theme={theme} />
+        <Home theme={theme} regionData={regionData} />
         <ScrollControl />
         <DrawerTop
           open={open}
@@ -45,7 +126,7 @@ const HomePage = () => {
             <NavigationMenuList>
               <NavigationMenuItem>
                 <NavigationMenuTrigger className="text-white [&>svg:last-child]:hidden">
-                  <ImMenu4 className="text-white/30 text-[2rem] cursor-pointer hover:text-white" />
+                  <ImMenu4 className="text-white/40 text-[2rem] cursor-pointer hover:text-white" />
                 </NavigationMenuTrigger>
                 <NavigationMenuContent className="text-white">
                   <ul className="grid w-50 gap-1 p-2">
@@ -55,7 +136,7 @@ const HomePage = () => {
                         target="_blank"
                         rel="noopener noreferrer"
                       >
-                        <FaLinkedin className="text-white/30 hover:text-white text-[1.5rem] cursor-pointer" />
+                        <FaLinkedin className="text-white/40 hover:text-white text-[1.5rem] cursor-pointer" />
                       </a>
                     </li>
                     <li>
@@ -64,23 +145,23 @@ const HomePage = () => {
                         target="_blank"
                         rel="noopener noreferrer"
                       >
-                        <FaGithubSquare className="text-white/30 hover:text-white text-[1.5rem] cursor-pointer" />
+                        <FaGithubSquare className="text-white/40 hover:text-white text-[1.5rem] cursor-pointer" />
                       </a>
                     </li>
                     <li>
                       <a href="mailto:vijeesh301@gmail.com">
-                        <SiGmail className="text-white/30 hover:text-white text-[1.4rem] cursor-pointer" />
+                        <SiGmail className="text-white/40 hover:text-white text-[1.4rem] cursor-pointer" />
                       </a>
                     </li>
                     <li>
                       {theme ? (
                         <CiDark
-                          className="text-white/30 hover:text-white text-[1.5rem] cursor-pointer"
+                          className="text-white/40 hover:text-white text-[1.5rem] cursor-pointer"
                           onClick={() => setTheme(!theme)}
                         />
                       ) : (
                         <MdDarkMode
-                          className="text-white/30 hover:text-white text-[1.5rem] cursor-pointer"
+                          className="text-white/40 hover:text-white text-[1.5rem] cursor-pointer"
                           onClick={() => setTheme(!theme)}
                         />
                       )}
@@ -90,6 +171,12 @@ const HomePage = () => {
               </NavigationMenuItem>
             </NavigationMenuList>
           </NavigationMenu>
+        </div>
+        {/* <div className="fixed bottom-2 right-2 z-50  text-white/40 text-[11px]"> */}
+        <div
+          className={`fixed bottom-2 right-2 z-50 text-[11px] ${!theme ? "text-white/40" : "text-[#5a0039]"}`}
+        >
+          Total Visitors: {visitorData?.length} | © 2026 All right reserved.
         </div>
       </div>
     </>

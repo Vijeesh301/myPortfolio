@@ -31,6 +31,14 @@ const FlipCards = ({ title, children }) => {
           </div>
         </div>
       </div>
+      {/* <div className="absolute inset-0 rounded-xl bg-zinc-900/20 border border-white/3 flex items-center justify-center [backface-visibility:hidden] [transform:rotateX(0deg)]">
+        <div className="text-center text-white">
+          <h2 className="text-2xl font-bold">{title}</h2>
+        </div>
+      </div>
+      <div className="absolute inset-0 rounded-xl bg-[#f277b6]/10 text-white flex items-center justify-center [transform:rotateY(180deg)] [backface-visibility:hidden] p-5">
+        {children}
+      </div> */}
     </>
   );
 };

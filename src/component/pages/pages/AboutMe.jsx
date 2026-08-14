@@ -1,3 +1,4 @@
+import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import useInView from "@/controlls/TextType";
 import useTypewriter from "@/controlls/useTypeWriter";
@@ -13,7 +14,7 @@ const AboutMe = () => {
 
   return (
     <>
-      <Card ref={ref} className="bg-[#540351]/10 w-full p-15 min-h-75">
+      <Card ref={ref} className="bg-[#540351]/10 w-full p-10 min-h-65">
         <CardHeader className="text-white text-[1.5rem]">
           <span>About Me</span>
           <div className="h-px flex-1 bg-white/20"></div>

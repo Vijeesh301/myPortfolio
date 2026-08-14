@@ -5,8 +5,9 @@ import SkillsData from "./SkillsData";
 import useMediaQuery from "@/controlls/useMediaQuery";
 import myPhoto from "@/assets/portfolio.png";
 import myPhotoM from "@/assets/portfolioM.png";
+import ContactForm from "./ContactForm";
 
-const Home = ({ theme }) => {
+const Home = ({ theme, regionData }) => {
   const scrollToAboutMe = () => {
     document.getElementById("about")?.scrollIntoView({ behavior: "smooth" });
   };
@@ -19,9 +20,14 @@ const Home = ({ theme }) => {
     document.getElementById("skills")?.scrollIntoView({ behavior: "smooth" });
   };
 
+  const scrollToContactForm = () => {
+    document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
+  };
+
   const isMobile = useMediaQuery("(max-width: 770px)");
 
-  const buttonClass = `${isMobile ? "text-white" : "hover:text-white"} bg-[#e04922]/20 hover:bg-[#e04922]/40 w-full}`;
+  const buttonClass = `${isMobile ? "text-white" : "hover:text-white"} text-white/20 bg-[#e04922]/20 hover:bg-[#e04922]/40}`;
+
   return (
     <>
       <div className="p-3">
@@ -50,6 +56,9 @@ const Home = ({ theme }) => {
                   <Button className={buttonClass} onClick={scrollToSkills}>
                     Skills
                   </Button>
+                  {/* <Button className={buttonClass} onClick={scrollToContactForm}>
+                    Contact Me
+                  </Button> */}
                 </div>
               </div>
             </div>
@@ -65,11 +74,14 @@ const Home = ({ theme }) => {
           <AboutMe />
         </div>
         <div className="my-15" id="details">
-          <DetailsSession />
+          <DetailsSession regionData={regionData} />
         </div>
         <div className="mt-5" id="skills">
-          <SkillsData />
+          <SkillsData regionData={regionData} />
         </div>
+        {/* <div className="mt-5" id="contact">
+          <ContactForm />
+        </div> */}
       </div>
     </>
   );
