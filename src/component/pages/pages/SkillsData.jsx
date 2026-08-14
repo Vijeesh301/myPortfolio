@@ -53,8 +53,9 @@ const SkillsData = ({ regionData }) => {
         <CardContent>
           <div className="flex flex-1 flex-col items-start text-left gap-0.5 pr-2">
             <span className="text-white text-base font-medium">
-              {regionData?.country_name !== "India" && "German - B2 | "} English
-              - B2 | Malayalam | Tamil
+              {regionData?.country_name === "India"
+                ? "English - B2 | Malayalam | Tamil"
+                : "German - B2 | English - B2"}
             </span>
           </div>
         </CardContent>
