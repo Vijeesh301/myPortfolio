@@ -60,48 +60,6 @@ const HomePage = () => {
     getUserData();
   }, []);
 
-  // FIREBASE DATA
-  // useEffect(() => {
-  //   const countVisit = async () => {
-  //     try {
-  //       const docRef = doc(db, "stats", "website");
-  //       const docSnap = await getDoc(docRef);
-  //       if (docSnap.exists()) {
-  //         const userData = [{}];
-  //         console.log(docSnap.data());
-  //         console.log("Visitors:", docSnap.data().visitors);
-  //       } else {
-  //         console.log("Document doesn't exist");
-  //       }
-  //     } catch (err) {
-  //       return err;
-  //     }
-
-  // try {
-  //   const docRef = doc(db, "stats", "visitors");
-
-  //   const docSnap = await getDoc(docRef);
-
-  //   if (docSnap.exists()) {
-  //     console.log(docSnap.data());
-  //   } else {
-  //     console.log("Document does not exist");
-  //   }
-  // const statsRef = doc(db, "stats", "website");
-  // await setDoc(
-  //   statsRef,
-  //   {
-  //     visitors: increment(1),
-  //   },
-  //   { merge: true },
-  // );
-  // } catch (error) {
-  //   return error;
-  // }
-  //   };
-  //   countVisit();
-  // }, []);
-
   return (
     <>
       {/* <div

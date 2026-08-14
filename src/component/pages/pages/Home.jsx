@@ -46,7 +46,7 @@ const Home = ({ theme, regionData }) => {
                     Java | Spring Boot | React | TypeScript | JavaSrpit
                   </p>
                 </div>
-                <div className="grid grid-cols-3 md:grid-cols-3 lg:grid-cols-3 gap-3 w-full max-w-md px-2">
+                <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-3 w-full max-w-md px-2">
                   <Button className={buttonClass} onClick={scrollToAboutMe}>
                     About me
                   </Button>
@@ -56,9 +56,9 @@ const Home = ({ theme, regionData }) => {
                   <Button className={buttonClass} onClick={scrollToSkills}>
                     Skills
                   </Button>
-                  {/* <Button className={buttonClass} onClick={scrollToContactForm}>
+                  <Button className={buttonClass} onClick={scrollToContactForm}>
                     Contact Me
-                  </Button> */}
+                  </Button>
                 </div>
               </div>
             </div>
@@ -79,9 +79,9 @@ const Home = ({ theme, regionData }) => {
         <div className="mt-5" id="skills">
           <SkillsData regionData={regionData} />
         </div>
-        {/* <div className="mt-5" id="contact">
+        <div className="mt-5" id="contact">
           <ContactForm />
-        </div> */}
+        </div>
       </div>
     </>
   );
