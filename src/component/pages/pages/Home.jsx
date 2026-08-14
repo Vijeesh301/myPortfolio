@@ -6,22 +6,49 @@ import useMediaQuery from "@/controlls/useMediaQuery";
 import myPhoto from "@/assets/portfolio.png";
 import myPhotoM from "@/assets/portfolioM.png";
 import ContactForm from "./ContactForm";
+import Lenis from "lenis";
 
 const Home = ({ theme, regionData }) => {
+  const lenis = new Lenis({
+    autoRaf: true,
+    smoothWheel: true,
+    wheelMultiplier: 0.8,
+  });
+
   const scrollToAboutMe = () => {
-    document.getElementById("about")?.scrollIntoView({ behavior: "smooth" });
+    const aboutSection = document.getElementById("about");
+    if (aboutSection) {
+      lenis.scrollTo(aboutSection, {
+        duration: 3,
+      });
+    }
   };
 
   const scrollToDetails = () => {
-    document.getElementById("details")?.scrollIntoView({ behavior: "smooth" });
+    const detailSection = document.getElementById("details");
+    if (detailSection) {
+      lenis.scrollTo(detailSection, {
+        duration: 3,
+      });
+    }
   };
 
   const scrollToSkills = () => {
-    document.getElementById("skills")?.scrollIntoView({ behavior: "smooth" });
+    const skillSection = document.getElementById("skills");
+    if (skillSection) {
+      lenis.scrollTo(skillSection, {
+        duration: 3,
+      });
+    }
   };
 
   const scrollToContactForm = () => {
-    document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
+    const contactSection = document.getElementById("contact");
+    if (contactSection) {
+      lenis.scrollTo(contactSection, {
+        duration: 3,
+      });
+    }
   };
 
   const isMobile = useMediaQuery("(max-width: 770px)");
