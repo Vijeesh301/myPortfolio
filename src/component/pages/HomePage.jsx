@@ -41,7 +41,7 @@ const HomePage = () => {
         setVisitorData(existingUsers);
         if (docSnap.exists()) {
           const hasExistingIp = existingUsers.some(
-            (data) => data?.ip === userData.ip,
+            (data) => data?.ip === userData?.ip,
           );
           if (!hasExistingIp) {
             await setDoc(
