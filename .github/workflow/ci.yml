@@ -3,12 +3,12 @@ name: CI
 on:
   push:
     branches:
-      - main
+      - gh-pages
       - develop
 
   pull_request:
     branches:
-      - main
+      - gh-pages
       - develop
 
 jobs:
