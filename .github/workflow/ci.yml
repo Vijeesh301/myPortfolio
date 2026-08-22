@@ -1,5 +1,38 @@
-name: My Portfolio Deploy
-# dgfdg
+# name: My Portfolio Deploy
+# # dgfdg
+
+# on:
+#   push:
+#     branches:
+#       - main
+
+# jobs:
+#   build-and-deploy:
+#     runs-on: ubuntu-latest
+
+#     steps:
+#       - name: Checkout code
+#         uses: actions/checkout@v6
+
+#       - name: Setup Node.js
+#         uses: actions/setup-node@v7
+#         with:
+#           node-version: 22
+#           cache: yarn
+
+#       - name: Install dependencies
+#         run: yarn install --frozen-lockfile
+
+#       - name: Build application
+#         run: yarn build
+
+#       - name: Deploy to gh-pages
+#         uses: peaceiris/actions-gh-pages@v4
+#         with:
+#           github_token: ${{ secrets.GITHUB_TOKEN }}
+#           publish_dir: ./dist
+
+name: CI
 
 on:
   push:
@@ -7,27 +40,12 @@ on:
       - main
 
 jobs:
-  build-and-deploy:
+  test:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout code
+      - name: Checkout
         uses: actions/checkout@v6
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v7
-        with:
-          node-version: 22
-          cache: yarn
-
-      - name: Install dependencies
-        run: yarn install --frozen-lockfile
-
-      - name: Build application
-        run: yarn build
-
-      - name: Deploy to gh-pages
-        uses: peaceiris/actions-gh-pages@v4
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist
+      - name: Test workflow
+        run: echo "GitHub Actions is working!"
