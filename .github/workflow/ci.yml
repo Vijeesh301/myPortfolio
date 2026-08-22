@@ -4,12 +4,12 @@ name: CI
 on:
   push:
     branches:
-      - gh-pages
+      - main
       - develop
 
   pull_request:
     branches:
-      - gh-pages
+      - main
       - develop
 
 jobs:
