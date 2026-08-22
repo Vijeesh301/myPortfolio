@@ -3,7 +3,7 @@ name: My Portfolio Deploy
 on:
   push:
     branches:
-      - main
+      - gh-pages
 
 jobs:
   build-and-deploy:
