@@ -32,7 +32,7 @@
 #           github_token: ${{ secrets.GITHUB_TOKEN }}
 #           publish_dir: ./dist
 
-name: CI
+name: Test GitHub Actions
 
 on:
   push:
@@ -47,5 +47,5 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v6
 
-      - name: Test workflow
+      - name: Test
         run: echo "GitHub Actions is working!"
