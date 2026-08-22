@@ -130,7 +130,7 @@ const HomePage = () => {
         <div
           className={`fixed bottom-2 right-2 z-50 text-[11px] ${!theme ? "text-white/40" : "text-[#5a0039]"}`}
         >
-          Total Visitors: {visitorData?.length} | © 2026 All rights reserved.
+          Total Visitors: {visitorData?.length} | © 2026 All rights reserved...
         </div>
       </div>
     </>
