@@ -1,19 +1,12 @@
-name: CI
-# hkjhk
+name: My Portfolio Deploy
 
 on:
   push:
     branches:
       - main
-      - develop
-
-  pull_request:
-    branches:
-      - main
-      - develop
 
 jobs:
-  test-and-build:
+  build-and-deploy:
     runs-on: ubuntu-latest
 
     steps:
@@ -31,3 +24,9 @@ jobs:
 
       - name: Build application
         run: yarn build
+
+      - name: Deploy to gh-pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist
