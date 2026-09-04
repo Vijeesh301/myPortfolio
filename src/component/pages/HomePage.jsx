@@ -37,7 +37,7 @@ const HomePage = () => {
         const docRef = doc(db, "stats", "website");
         const docSnap = await getDoc(docRef);
         const userData = res.data;
-        const existingUsers = docSnap.data()?.userData ?? [];
+        const existingUsers = docSnap.data() || [];
         setVisitorData(existingUsers);
         if (docSnap.exists()) {
           const hasExistingIp = existingUsers.some(
@@ -130,7 +130,8 @@ const HomePage = () => {
         <div
           className={`fixed bottom-2 right-2 z-50 text-[11px] ${!theme ? "text-white/40" : "text-[#5a0039]"}`}
         >
-          Total Visitors: {visitorData?.length} | © 2026 All rights reserved...
+          Total Visitors: {visitorData?.userData?.length} | M:{" "}
+          {visitorData?.messageData?.length} | © 2026 All rights reserved...
         </div>
       </div>
     </>

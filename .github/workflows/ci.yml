@@ -23,15 +23,15 @@ jobs:
       - name: Install dependencies
         run: yarn install --frozen-lockfile
 
-      - name: Check Firebase env
-        run: |
-          echo "PROJECT_ID: ${VITE_FIREBASE_PROJECT_ID:+SET}"
-          echo "APP_ID: ${VITE_FIREBASE_APP_ID:+SET}"
-          echo "API_KEY: ${VITE_FIREBASE_API_KEY:+SET}"
-        env:
-          VITE_FIREBASE_PROJECT_ID: ${{ secrets.VITE_FIREBASE_PROJECT_ID }}
-          VITE_FIREBASE_APP_ID: ${{ secrets.VITE_FIREBASE_APP_ID }}
-          VITE_FIREBASE_API_KEY: ${{ secrets.VITE_FIREBASE_API_KEY }}
+      # - name: Check Firebase env
+      #   run: |
+      #     echo "PROJECT_ID: ${VITE_FIREBASE_PROJECT_ID:+SET}"
+      #     echo "APP_ID: ${VITE_FIREBASE_APP_ID:+SET}"
+      #     echo "API_KEY: ${VITE_FIREBASE_API_KEY:+SET}"
+      #   env:
+      #     VITE_FIREBASE_PROJECT_ID: ${{ secrets.VITE_FIREBASE_PROJECT_ID }}
+      #     VITE_FIREBASE_APP_ID: ${{ secrets.VITE_FIREBASE_APP_ID }}
+      #     VITE_FIREBASE_API_KEY: ${{ secrets.VITE_FIREBASE_API_KEY }}
 
       - name: Build application
         run: yarn build
