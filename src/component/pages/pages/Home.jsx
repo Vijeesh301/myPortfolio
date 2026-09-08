@@ -70,7 +70,7 @@ const Home = ({ theme, regionData }) => {
                     FULLSTACK DEVELOPER
                   </p>
                   <p className="tracking-[.08rem] text-center">
-                    Java | Spring Boot | React | TypeScript | JavaSrpit
+                    Java | Spring-Boot | React | TypeScript | JavaScript
                   </p>
                 </div>
                 <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-3 w-full max-w-md px-2">

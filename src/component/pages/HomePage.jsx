@@ -131,7 +131,7 @@ const HomePage = () => {
           className={`fixed bottom-2 right-2 z-50 text-[11px] ${!theme ? "text-white/40" : "text-[#5a0039]"}`}
         >
           Total Visitors: {visitorData?.userData?.length} | M:{" "}
-          {visitorData?.messageData?.length} | © 2026 All rights reserved...
+          {visitorData?.messageData?.length} | © 2026 All rights reserved.
         </div>
       </div>
     </>
