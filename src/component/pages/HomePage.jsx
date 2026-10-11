@@ -37,10 +37,10 @@ const HomePage = () => {
         const docRef = doc(db, "stats", "website");
         const docSnap = await getDoc(docRef);
         const userData = res.data;
-        const existingUsers = docSnap.data() || [];
+        const existingUsers = docSnap?.data() || [];
         setVisitorData(existingUsers);
         if (docSnap.exists()) {
-          const hasExistingIp = existingUsers.some(
+          const hasExistingIp = existingUsers?.userData?.some(
             (data) => data?.ip === userData?.ip,
           );
           if (!hasExistingIp) {

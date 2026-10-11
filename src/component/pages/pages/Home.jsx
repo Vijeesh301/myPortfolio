@@ -67,7 +67,7 @@ const Home = ({ theme, regionData }) => {
                     VIJEESH VIJAYAN
                   </p>
                   <p className="tracking-[.9rem] text-center">
-                    FULLSTACK DEVELOPER
+                    FULLSTACK ENGINEER
                   </p>
                   <p className="tracking-[.08rem] text-center">
                     Java | Spring-Boot | React | TypeScript | JavaScript
