@@ -29,7 +29,27 @@ const DetailsSession = ({ regionData }) => {
                 I build scalable web applications with modern frontend and
                 backend technologies.
               </p>
-              {regionData?.country_name !== "India" && (
+              {regionData?.country_name !== "India" &&
+                regionData?.country_name !== "United Arab Emirates" && (
+                  <>
+                    <div className="text-white text-[1.5rem] my-5">
+                      <span>Resume</span>
+                      <div className="h-px flex-1 bg-white/20"></div>
+                    </div>
+                    <div className="text-white gap-5 flex">
+                      <a
+                        href="https://drive.google.com/file/d/1Mn8wv-gcRidP_Qvhdt7zERJ8XkF6yCkp/view?usp=sharing"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <Button className="bg-[#16b36b]/20 w-50 hover:bg-[#16b36b]/50">
+                          View & Download
+                        </Button>
+                      </a>
+                    </div>
+                  </>
+                )}
+              {regionData?.country_name === "United Arab Emirates" && (
                 <>
                   <div className="text-white text-[1.5rem] my-5">
                     <span>Resume</span>
@@ -37,7 +57,7 @@ const DetailsSession = ({ regionData }) => {
                   </div>
                   <div className="text-white gap-5 flex">
                     <a
-                      href="https://drive.google.com/file/d/1MK0ynY7FX5mp1CvGqK7w2hd2Gw8_JdJN/view?usp=drive_link"
+                      href="https://drive.google.com/file/d/1YMfp1YOtYlhfVSxOzWMbdNbvle0gjzDq/view?usp=sharing"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
@@ -58,6 +78,57 @@ const DetailsSession = ({ regionData }) => {
           </CardHeader>
           <CardContent>
             <Accordion type="single" collapsible>
+              {regionData?.country_name === "United Arab Emirates" && (
+                <AccordionItem
+                  value="frontend-engineer"
+                  className="border-b border-white/15"
+                >
+                  <AccordionTrigger className="hover:no-underline">
+                    <div className="flex flex-1 flex-col items-start text-left gap-0.5 pr-2">
+                      <span className="text-white text-base font-medium">
+                        Frontend Engineer
+                      </span>
+                      <span className="text-white/50 text-sm">
+                        Maryoon Living UG, Berlin, Germany - 02/2026 - Present
+                      </span>
+                    </div>
+                  </AccordionTrigger>
+                  <AccordionContent>
+                    <ul className="list-disc list-inside space-y-1.5 text-white/70 text-sm">
+                      <li>
+                        Built a responsive client-facing web app end-to-end
+                        using React, Shadecn and Tailwind
+                      </li>
+                      <li>
+                        Integrated REST APIs and handled state management across
+                        the app
+                      </li>
+                    </ul>
+                    <div className="flex flex-wrap gap-2 mt-3">
+                      <span className={spanClass}>React</span>
+                      <span className={spanClass}>Tailwind CSS</span>
+                      <span className={spanClass}>REST API</span>
+                      <span className={spanClass}>Javascript</span>
+                      <span className={spanClass}>Shadcn</span>
+                    </div>
+                    <div className="text-[1rem] flex flex-1 flex-col items-start text-left gap-0.5 pr-2 mt-3">
+                      <span className="text-white text-base font-medium">
+                        Project:
+                      </span>
+                      <ul className="text-[13px] list-disc list-inside space-y-1.5 text-white/70 text-sm">
+                        <li>
+                          <span className="font-bold">
+                            Real Estate Application:
+                          </span>{" "}
+                          Real Estate Management Application, Accomodation
+                          Details, Client Details, Rent Details, Availability,
+                          etc.
+                        </li>
+                      </ul>
+                    </div>
+                  </AccordionContent>
+                </AccordionItem>
+              )}
               <AccordionItem
                 value="freelance"
                 className="border-b border-white/15"

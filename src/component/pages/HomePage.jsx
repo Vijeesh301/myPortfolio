@@ -39,6 +39,7 @@ const HomePage = () => {
         const userData = res.data;
         const existingUsers = docSnap?.data() || [];
         setVisitorData(existingUsers);
+        console.log(existingUsers, 'hkjhk')
         if (docSnap.exists()) {
           const hasExistingIp = existingUsers?.userData?.some(
             (data) => data?.ip === userData?.ip,
