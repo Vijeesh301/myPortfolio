@@ -43,7 +43,7 @@ const HomePage = () => {
           const hasExistingIp = existingUsers?.userData?.some(
             (data) => data?.ip === userData?.ip,
           );
-          if (!hasExistingIp) {
+          if (hasExistingIp) {
             await setDoc(
               doc(db, "stats", "website"),
               {
